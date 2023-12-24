@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles1.css">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Complaint Registration Form</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Complaint Registration Form</h1>
+            <form action="/submit" method="POST">
+                <div class="form-group">
+                    <label for="title">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="title">College Id:</label>
+                    <input type="text" id="collegeid" name="collegeid" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="title">Title of Grievance:</label>
+                    
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="details">Details:</label>
+                    
+                    <textarea id="details" name="details" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priority:</label>
+                    
+                    <select id="priority" name="priority" required>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Urgent">Urgent</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date:</label>
+                    
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="Department">Department:</label>
+                    <br>
+                    <select id="Department" name="Department" required>
+                        <option value="BBA">BBA</option>
+                        <option value="BCA">BCA</option>
+                        <option value="MCA">MCA</option>
+                        <option value="BTECH-ECE">BTECH-ECE</option>
+                        <option value="BTECH-MECHANICAL">BTECH-MECHANICAL</option>
+                        <option value="BSC-IT">BSC-IT</option>
+                        <option value="BSC-CYBERSECURITY">BSC-CYBERSECURITY</option>
+                        <option value="MTECH">MTECH</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+    </html>
+    
+</body>
+</html>

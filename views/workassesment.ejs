@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <style>
+    h1{
+        font-family: 'Montserrat', sans-serif;
+    }
+    body { 
+         font-family: Arial, sans-serif; 
+         background-color: rgb(231, 242, 252);
+        }
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      margin: 20px auto;
+      border-radius: 5px; /* Add this line to set the border-radius */
+      overflow: hidden;
+      /* Add this line to ensure the rounded corners are applied */
+
+    }
+     td {
+      text-align: left;
+      padding: 8px;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    
+    th {
+      background: #4292dc;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 22px;
+      color: white;
+      text-align: center; /* Center the th elements */
+      height: 60px; /* Increase the height of th elements */
+    }
+    td {
+      text-align: center; /* Center the td elements */
+      background-color: white;
+    }
+    @media screen and (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      th {
+        text-align: center;
+      }
+      tr {
+        margin-bottom: 15px;
+      }
+      td {
+        text-align: center; /* Center the td elements */
+        padding-left: 50%;
+        position: relative;
+      }
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<center><h1>Work Assesment</h1></center>
+
+<div class="table-responsive">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>College Id</th>
+        <th>Title</th>
+        <th>Details</th>
+        <th>Priority</th>
+        <th>Complain Date</th>
+        <th>Department</th>
+      </tr>
+    </thead>
+    <tbody>
+                <% complainsList.forEach(complains=>{%>
+                  <tr>
+                  <td><%= complains.Name %></td>
+                  <td><%=complains.collegeId%></td>
+                  <td><%= complains.Title %></td>
+                  <td><%= complains.Details %></td>
+                  <td><%= complains.Priority %></td>
+                  <td><%= complains.date %></td>
+                  <td><%= complains.department %></td>
+                </tr>
+                  <%}) %>
+      
+      
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
